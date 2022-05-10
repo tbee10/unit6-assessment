@@ -87,6 +87,8 @@ app.get('/api/player', (req, res) => {
     }
 })
 
+app.use(rollbar.errorHandler());
+
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {
